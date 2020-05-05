@@ -3,6 +3,8 @@ import { AppLoading } from 'expo';
 import { Container, Text, Header, Left, Button, Icon, Title, Body, Right, Content } from 'native-base';
 import * as Font from 'expo-font';
 import { Ionicons } from '@expo/vector-icons';
+import HomeScreen from './component/HomeScreen';
+import { Stack } from './component/Stack';
 
 type AppProps = {}
 type AppState = {
@@ -28,18 +30,7 @@ export default class App extends React.Component<AppProps, AppState> {
     }
 
     return (
-      <Container>
-        <Header>
-          <Left />
-          <Body>
-            <Title>ToDo</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <Text>Hello!</Text>
-        </Content>
-      </Container>
+      <HomeScreen />
     );
   }
 }
